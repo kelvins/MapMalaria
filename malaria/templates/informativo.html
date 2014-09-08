@@ -1,0 +1,223 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<script src="{% static 'js/jquery.min.js' %}"></script>
+		<meta charset="utf-8">
+
+		<title>Sistema da Malária</title>
+		<meta name="description" content="description">
+		<meta name="author" content="Malaria">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+		<link href="{% static 'plugins/bootstrap/bootstrap.css' %}" rel="stylesheet">
+		<link href="{% static 'plugins/jquery-ui/jquery-ui.min.css' %}" rel="stylesheet">
+
+		<link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+		<link href='http://fonts.googleapis.com/css?family=Righteous' rel='stylesheet' type='text/css'>
+
+		<link href="{% static 'plugins/fancybox/jquery.fancybox.css' %}" rel="stylesheet">
+		<link href="{% static 'css/style.css' %}" rel="stylesheet">
+        <link href="{% static 'css/estilo.css' %}" rel="stylesheet" type="text/css">		
+	</head>
+<body>
+<!--Start Header-->
+<header class="navbar">
+	<div class="container-fluid expanded-panel">
+		<div class="row">
+			<div id="logo" class="col-xs-12 col-sm-12">
+				<a href="http://127.0.0.1:8000/dados/">Sistema da Malária</a>
+			</div>
+		</div>
+	</div>
+</header>
+<!--End Header-->
+<!--Start Container-->
+<div id="main" class="container-fluid">
+	<div class="row">
+		<div id="sidebar-left" class="col-xs-2 col-sm-2">
+			<ul class="nav main-menu">
+				<li>
+					<a href="http://127.0.0.1:8000/dados/">
+						<i class="fa fa-home"></i>
+						<span class="hidden-xs">Inicial</span>
+					</a>
+				</li>
+				<li>
+					<a href="http://127.0.0.1:8000/dados/mapa/">
+						<i class="fa fa-map-marker"></i>
+						<span class="hidden-xs">Mapa</span>
+					</a>
+				</li><li>
+					<a href="http://127.0.0.1:8000/dados/informativo/">
+						<i class="fa fa-info"></i>
+						<span class="hidden-xs">Informativo</span>
+					</a>
+				</li>
+				<li>
+					<a href="http://127.0.0.1:8000/dados/estatisticas/">
+						<i class="fa fa-bar-chart-o"></i>
+						<span class="hidden-xs">Estatíscas</span>
+					</a>
+				</li>
+				<li>
+					<a href="http://127.0.0.1:8000/dados/sobre/">
+						<i class="fa fa-comment-o"></i>
+						<span class="hidden-xs">Sobre</span>
+					</a>
+				</li>
+			</ul>
+		</div>
+		<!--Start Content-->
+		<div id="content" class="col-xs-12 col-sm-10">
+	
+			<!--Start Breadcrumb-->
+			<div class="row">
+				<div id="breadcrumb" class="col-xs-12">
+					<ol class="breadcrumb">
+						<li style="color: rgb(255,255,255);">Informativo</li>
+					</ol>
+				</div>
+			</div>
+			<!--End Breadcrumb-->
+<!--Start Dashboard 1-->
+<div id="dashboard-header" class="row">
+	<div class="col-xs-12 col-sm-12">
+		<h3>Informativo sobre a Malária</h3>
+
+		<div class="box">
+			<div class="box-header">
+				<div class="box-name">
+					<i class="fa fa-info"></i>
+				</div>
+
+			</div>
+			<div class="box-content" id="accordion">
+				<h3>O que é a doença?</h3>
+				<div>
+					<p>
+						A malária é uma doença infecciosa, febril, potencialmente grave, causada pelo parasita do gênero Plasmodium, transmitido ao homem, na maioria das vezes pela picada de mosquitos infectados.
+					</p>
+					<p>
+						No entanto, também pode ser transmitida pelo compartilhamento de seringas, transfusão de sangue ou até mesmo da mãe para feto, na gravidez.
+					</p>
+				</div>
+				<h3>Sintomas</h3>
+				<div>
+					<p>
+						No caso de infecção por P. falciparum, inclui calafrios, febre alta, sudorese e dor de cabeça, dor muscular, taquicardia, aumento do baço e, por vezes, delírios também existe uma chance em dez de se desenvolver o que se chama de malária cerebral, responsável por cerca de 80% dos casos letais da doença. Na malária cerebral, além da febre, pode aparecer dor de cabeça, ligeira rigidez na nuca, perturbações sensoriais, desorientação, sonolência ou excitação, convulsões, vômitos, podendo o paciente chegar ao coma.
+					</p>
+					<p>
+						Se o agente causador da malária for da espécie P. vivax os sintomas incluem mal-estar, calafrios, febre inicialmente diária (com o tempo, a febre apresenta um padrão de intervalo a cada dois dias), seguida de suor intenso e prostração. O quadro clínico da infecção por P. malariae é bem semelhante, mas geralmente com febre mais baixa que se repete a cada três dias.
+					</p>
+				</div>
+				<h3>Diagnóstico</h3>
+				<div>
+					<p>
+						A principal causa de morte por malária é o diagnóstico tardio e a falta de profissionais familiarizados com o quadro da doença fora da região endêmica. No Brasil, por exemplo, ocorrem cem vezes mais óbitos nas áreas fora da Região Amazônica do que na região endêmica propriamente.
+					</p>
+					<p>
+						Por isso é importante que, pessoas com suspeita de malária que residam fora da região endêmica procurem um serviço especializado no diagnóstico e tratamento da malária, como é o caso do Instituto de Pesquisa Clínica Evandro Chagas (Ipec/Fiocruz), no Rio de Janeiro, que oferece plantão 24h, durante os sete dias da semana.
+					</p>
+					<p>
+						A recomendação da Organização Mundial da Saúde (OMS) é que o diagnóstico dos pacientes com suspeita de malária se dê por meio de exames parasitológicos por microscopia ou de testes rápidos de diagnósticos (rapid diagnostic tests - RDTs). O diagnóstico precoce é essencial para o bom prognóstico do paciente e depende da suspeição clínica.
+					</p>
+				</div>
+				<h3>Tratamento</h3>
+				<div>
+					<p>
+						O tratamento da malária visa eliminar o mais rapidamente possível o parasita da corrente sanguínea do indivíduo e deve ser iniciado o mais rapidamente possível. O tratamento imediato com antimalárico – até 24h após o início da febre – é fundamental para prevenir as complicações.
+					</p>
+					<p>
+						 Se o teste de diagnóstico não estiver acessível nas primeiras duas horas de atendimento, o tratamento com antimaláricos deve ser administrado com base no quadro clínico e epidemiológico do paciente.
+					</p>
+					<p>
+						A OMS recomenda combinações terapêuticas à base de artemisinina (ACTs) para o tratamento da malária causada pelo parasita P. falciparum. A combinação de dois ingredientes ativos com diferentes mecanismos de ação faz das ACTs o antimalárico disponível mais eficaz.
+					</p>
+					<p>
+						A artemisinina e os seus derivados não podem ser utilizados como monoterapia oral. Formulações de dose fixa (combinação de dois ingredientes ativos diferentes em um único comprimido) são mais recomendadas do que o uso de vários comprimidos ou cápsulas, uma vez que facilitam a adesão ao tratamento.
+					</p>
+					<p>
+						Infecções por P. vivax devem ser tratadas com cloroquina em áreas onde o medicamento ainda é eficaz, como a maior parte do Brasil, associado à primaquina para a eliminação das formas hepáticas latentes. Em áreas resistentes à cloroquina, deve ser utilizado um ACT, combinado a outro de meia-vida longa.
+					</p>
+					<p>
+						O tratamento para quadros graves de malária consiste na administração de artesunato injetável (intramuscular ou intravenosa), seguido de um tratamento à base de ACTs assim que o paciente estiver apto a tomar medicamentos orais. Na impossibilidade de tratamento injetável, o paciente deve receber imediatamente artesunato via intra-rectal e ser encaminhado o mais rapidamente possível para um local adequado para o tratamento parenteral completo.
+					</p>
+					<p>
+						A OMS recomenda que os programas nacionais de controle da malária acompanhem com regularidade a eficácia dos medicamentos antimaláricos.
+					</p>
+				</div>
+				<h3>Prevenção</h3>
+				<div>
+					<p>
+						A prevenção da malária consiste no controle/eliminação do mosquito transmissor e pode se dar por meio de medidas individuais, com uso de mosquiteiros impregnados ou não com inseticidas, roupas que protejam pernas e braços, telas em portas e janelas, repelentes. 
+					</p>
+					<p>
+						Medidas coletivas incluem drenagem de coleções de água, pequenas obras de saneamento para eliminação de criadouros do vetor, aterro, limpeza das margens dos criadouros, modificação do fluxo da água, controle da vegetação aquática, melhoramento da moradia e das condições de trabalho, uso racional da terra.
+					</p>
+					<p>
+						Programas coletivos de quimioprofilaxia não têm sido adotados devido à resistência do P. falciparum à cloroquina e a outros antimaláricos e à toxicidade e custo mais elevado de novas drogas. 
+					</p>
+					<p>
+						Porém, em situações especiais, como missões militares, religiosas, diplomáticas, viagens de turismo e outras, em que haja deslocamento para áreas maláricas dos continentes africano e asiático, recomenda-se entrar antecipadamente, (idealmente um mês antes da viagem), em contato com os os setores responsáveis pelo controle da malária, nas secretarias municipais e estaduais de saúde, e do Ministério da Saúde. No Rio de Janeiro, o Instituto de Pesquisa Clínica Evandro Chagas (Ipec/Fiocruz) oferece serviço de aconselhamento médico a viajantes.
+					</p>
+				</div>
+				<h3>Agentes causadores</h3>
+				<div>
+					<p>
+						No Brasil existem três espécies de Plasmodium que afetam o ser humano: P. falciparum, P. vivax e P. malariae. O mais agressivo é o P. falciparum, que se multiplica rapidamente na corrente sanguínea, destruindo de 2% a 25% do total de hemácias (glóbulos vermelhos) e provocando um quadro de anemia grave.
+					</p>
+					<p>
+						Já o P. Vivax, de modo geral, causa um tipo de malária mais branda, que não atinge mais do que 1% das hemácias, e é raramente mortal. No entanto, seu tratamento pode ser mais complicado, já que o P. vivax se aloja por mais tempo no fígado, dificultando sua eliminação. Alem disso, pode haver diminuição do número de plaquetas (plaquetopenia), o que poderia confundir esta infecção com outra doença bastante comum, a Dengue, retardando o diagnóstico.
+					</p>
+					<p>
+						A doença provocada pela espécie P. malariae possui quadro clínico bem semelhante ao da malária causada pelo P. vivax. É possível que a pessoa acometida por este parasita tenha recaídas a longo prazo, podendo desenvolver a doença novamente anos mais tarde.
+					</p>
+				</div>
+				<h3>Panorama geral da doença no Brasil</h3>
+				<div>
+					<p>
+						Estima-se que mais de 40% da população mundial está exposta ao risco de adquirir malária. No Brasil, segundo dados do MS, em 2011, 99,7% dos casos de transmissão da doença se concentraram na Região Amazônica, considerada uma área endêmica no país. A maior parte dos casos notificados se concentra nos estados do Pará, Amazonas, Rondônia, Acre, Amapá e Roraima.						
+					</p>
+					<p>
+						A transmissão nessa área está relacionada a fatores biológicos (presença de alta densidade de mosquitos vetores, agente etiológico e população suscetível); geográficos (altos índices de pluviosidade, amplitude da malha hídrica e a cobertura vegetal); ecológicos (desmatamentos, construção de hidroelétricas, estradas e de sistemas de irrigação, açudes); e sociais (presença de numerosos grupos populacionais, morando em habitações com ausência completa ou parcial de paredes laterais e trabalhando próximo ou dentro das matas).
+					</p>
+					<p>
+						Um dos principais objetivos do Programa Nacional de Controle da Malária tem sido acabar com o número de mortes pela doença. No ano de 2011, foram registrados no Sistema de Informações sobre Mortalidade do Ministério da Saúde (SIM) 69 óbitos por malária, representando uma redução de 71,8% em relação a 2000 (245 óbitos), e de 9,2% quando comparado com 2010 (76 óbitos).
+					</p>
+
+				</div>
+			</div>
+		</div>
+		Fonte: Fiocruz
+	</div>
+</div>
+<!--End Dashboard 1-->
+</div>
+		<!--End Content-->
+	</div>
+</div>
+<!--End Container-->
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<!--<script src="http://code.jquery.com/jquery.js"></script>-->
+<script src="{% static 'plugins/jquery-ui/jquery-ui.js' %}"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="{% static 'plugins/bootstrap/bootstrap.min.js' %}"></script>
+<!-- All functions for this theme + document.ready processing -->
+<script src="{% static 'js/devoops.js' %}"></script>
+
+<script type="text/javascript">
+$(document).ready(function() {
+	var icons = {
+		header: "ui-icon-circle-arrow-e",
+		activeHeader: "ui-icon-circle-arrow-s"
+	};
+	// Make accordion feature of jQuery-UI
+	$("#accordion").accordion({icons: icons });
+});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,110 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>		
+		<script src="{% static 'js/jquery.min.js' %}"></script>
+
+		<meta charset="utf-8">
+		<title>Sistema da Malária</title>
+		<meta name="description" content="description">
+		<meta name="author" content="Malaria">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<link href="{% static 'plugins/bootstrap/bootstrap.css' %}" rel="stylesheet">
+		<link href="{% static 'plugins/jquery-ui/jquery-ui.min.css' %}" rel="stylesheet">
+
+		<link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+		<link href='http://fonts.googleapis.com/css?family=Righteous' rel='stylesheet' type='text/css'>
+
+		<link href="{% static 'css/style.css' %}" rel="stylesheet">
+        <link href="{% static 'css/estilo.css' %}" rel="stylesheet" type="text/css">
+	</head>
+<body>
+<!--Start Header-->
+<header class="navbar">
+	<div class="container-fluid expanded-panel">
+		<div class="row">
+			<div id="logo" class="col-xs-12 col-sm-12">
+				<a href="http://127.0.0.1:8000/dados/">Sistema da Malária</a>
+			</div>
+		</div>
+	</div>
+</header>
+<!--End Header-->
+<!--Start Container-->
+<div id="main" class="container-fluid">
+	<div class="row">
+		<div id="sidebar-left" class="col-xs-2 col-sm-2">
+			<ul class="nav main-menu">
+				<li>
+					<a href="http://127.0.0.1:8000/dados/">
+						<i class="fa fa-home"></i>
+						<span class="hidden-xs">Inicial</span>
+					</a>
+				</li>
+				<li>
+					<a href="http://127.0.0.1:8000/dados/mapa/">
+						<i class="fa fa-map-marker"></i>
+						<span class="hidden-xs">Mapa</span>
+					</a>
+				</li><li>
+					<a href="http://127.0.0.1:8000/dados/informativo/">
+						<i class="fa fa-info"></i>
+						<span class="hidden-xs">Informativo</span>
+					</a>
+				</li>
+				<li>
+					<a href="http://127.0.0.1:8000/dados/estatisticas/">
+						<i class="fa fa-bar-chart-o"></i>
+						<span class="hidden-xs">Estatíscas</span>
+					</a>
+				</li>
+				<li>
+					<a href="http://127.0.0.1:8000/dados/sobre/">
+						<i class="fa fa-comment-o"></i>
+						<span class="hidden-xs">Sobre</span>
+					</a>
+				</li>
+			</ul>
+		</div>
+		<!--Start Content-->
+		<div id="content" class="col-xs-12 col-sm-10">
+
+
+
+			<!--Start Breadcrumb-->
+			<div class="row">
+				<div id="breadcrumb" class="col-xs-12">
+					<ol class="breadcrumb">
+						<li style="color: rgb(255,255,255);">Inicial</li>
+					</ol>
+				</div>
+			</div>
+			<!--End Breadcrumb-->
+			<!--Start Dashboard 1-->
+			<div id="dashboard-header" class="row">
+				<div class="col-xs-12 col-sm-12" align="center">
+					<h3>Bem Vindo ao Sistema da Malárias!</h3>
+				</div>
+			</div>
+			<!--End Dashboard 1-->
+
+
+
+
+		</div>
+		<!--End Content-->
+	</div>
+</div>
+<!--End Container-->
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<!--<script src="http://code.jquery.com/jquery.js"></script>-->
+<script src="{% static 'plugins/jquery-ui/jquery-ui.js' %}"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="{% static 'plugins/bootstrap/bootstrap.min.js' %}"></script>
+<!-- All functions for this theme + document.ready processing -->
+<script src="{% static 'js/devoops.js' %}"></script>
+
+</body>
+</html>

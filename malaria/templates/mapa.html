@@ -1,0 +1,175 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>		
+		<script src="{% static 'js/jquery.min.js' %}"></script>
+
+		<meta charset="utf-8">
+		<title>Sistema da Malária{{ vSaida }}</title>
+		<meta name="description" content="description">
+		<meta name="author" content="Malaria">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<link href="{% static 'plugins/bootstrap/bootstrap.css' %}" rel="stylesheet">
+		<link href="{% static 'plugins/jquery-ui/jquery-ui.min.css' %}" rel="stylesheet">
+
+		<link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+		<link href='http://fonts.googleapis.com/css?family=Righteous' rel='stylesheet' type='text/css'>
+
+		<link href="{% static 'css/style.css' %}" rel="stylesheet">
+        <link href="{% static 'css/estilo.css' %}" rel="stylesheet" type="text/css">
+	</head>
+<body>
+<!--Start Header-->
+<header class="navbar">
+	<div class="container-fluid expanded-panel">
+		<div class="row">
+			<div id="logo" class="col-xs-12 col-sm-12">
+				<a href="http://127.0.0.1:8000/dados/">Sistema da Malária</a>
+			</div>
+		</div>
+	</div>
+</header>
+<!--End Header-->
+<!--Start Container-->
+<div id="main" class="container-fluid">
+	<div class="row">
+		<div id="sidebar-left" class="col-xs-2 col-sm-2">
+			<ul class="nav main-menu">
+				<li>
+					<a href="http://127.0.0.1:8000/dados/">
+						<i class="fa fa-home"></i>
+						<span class="hidden-xs">Inicial</span>
+					</a>
+				</li>
+				<li>
+					<a href="http://127.0.0.1:8000/dados/mapa/">
+						<i class="fa fa-map-marker"></i>
+						<span class="hidden-xs">Mapa</span>
+					</a>
+				</li><li>
+					<a href="http://127.0.0.1:8000/dados/informativo/">
+						<i class="fa fa-info"></i>
+						<span class="hidden-xs">Informativo</span>
+					</a>
+				</li>
+				<li>
+					<a href="http://127.0.0.1:8000/dados/estatisticas/">
+						<i class="fa fa-bar-chart-o"></i>
+						<span class="hidden-xs">Estatíscas</span>
+					</a>
+				</li>
+				<li>
+					<a href="http://127.0.0.1:8000/dados/sobre/">
+						<i class="fa fa-comment-o"></i>
+						<span class="hidden-xs">Sobre</span>
+					</a>
+				</li>
+			</ul>
+		</div>
+		<!--Start Content-->
+		<div id="content" class="col-xs-12 col-sm-10">
+
+
+<!--End Container-->
+
+<!--Start Breadcrumb-->
+<div class="row">
+	<div id="breadcrumb" class="col-xs-12">
+		<ol class="breadcrumb">
+			<li style="color: rgb(255,255,255);">Mapa</li>
+		</ol>
+	</div>
+</div>
+<!--End Breadcrumb-->
+<!--Start Dashboard 1-->
+<div id="dashboard-header" class="row">
+<div class="col-xs-12 col-sm-12">
+		<div class="box">
+			<div class="box-header">
+				<div class="box-name">
+					<i class="fa fa-search"></i>
+					<span>Pesquisar por Cidade / Estado</span>
+				</div>
+
+				<div class="no-move"></div>
+			</div>
+			<div class="box-content">
+				<form class="form-horizontal" role="form" method="post">
+				    {% csrf_token %}				    
+					<div class="form-group" align="left">
+						<label class="col-sm-1 control-label">Cidade</label>
+						<div class="col-sm-5">
+							<input name="edCidade" id="edCidade" type="text" class="form-control" placeholder="Digite a Cidade que deseja pesquisar" data-toggle="tooltip" data-placement="bottom" title="Tooltip for name">
+						</div>
+						<label class="col-sm-1 control-label">Estado</label>
+						<div class="col-sm-3">
+							<select name="cbUF" id="cbUF" class=" form-control">
+								<option value="">Todos</option>
+								<option value="AC">Acre</option>
+								<option value="AL">Alagoas</option>
+								<option value="AP">Amapá</option>
+								<option value="AM">Amazonas</option>
+								<option value="BA">Bahia</option>
+								<option value="CE">Ceará</option>
+								<option value="DF">Distrito Federal</option>
+								<option value="ES">Espirito Santo</option>
+								<option value="GO">Goiás</option>
+								<option value="MA">Maranhão</option>
+								<option value="MT">Mato Grosso</option>
+								<option value="MS">Mato Grosso do Sul</option>
+								<option value="MG">Minas Gerais</option>
+								<option value="PA">Pará</option>
+								<option value="PB">Paraiba</option>
+								<option value="PR">Paraná</option>
+								<option value="PE">Pernambuco</option>
+								<option value="PI">Piauí</option>
+								<option value="RJ">Rio de Janeiro</option>
+								<option value="RN">Rio Grande do Norte</option>
+								<option value="RS">Rio Grande do Sul</option>
+								<option value="RO">Rondônia</option>
+								<option value="RR">Roraima</option>
+								<option value="SC">Santa Catarina</option>
+								<option value="SP">São Paulo</option>
+								<option value="SE">Sergipe</option>
+								<option value="TO">Tocantis</option>
+							</select>
+						</div>
+						<div class="col-sm-2">
+							<button type="submit" class="btn btn-success btn-label-left">
+								<span><i class="fa fa-search"></i></span>
+								Pesquisar
+							</button>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+
+	<div class="col-xs-12 col-sm-12" align="center">
+		<div id="mapa" style="height: 500px; width: 100%;"></div>
+	</div>
+</div>
+<!--End Dashboard 1-->
+		</div>
+		<!--End Content-->
+	</div>
+</div>
+
+<script src="{% static 'plugins/jquery-ui/jquery-ui.js' %}"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="{% static 'plugins/bootstrap/bootstrap.min.js' %}"></script>
+<!-- All functions for this theme + document.ready processing -->
+<script src="{% static 'js/devoops.js' %}"></script>
+
+<script src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
+<!-- Caixa de informação -->
+<script src="{% static 'js/infobox.js' %}"></script>
+<!-- Agrupamento dos marcadores -->
+<script src="{% static 'js/markerclusterer.js' %}"></script>
+<!-- Arquivo de inicialização do mapa -->
+<script src="{% static 'js/mapa.js' %}"></script>
+</body>
+
+</html>
